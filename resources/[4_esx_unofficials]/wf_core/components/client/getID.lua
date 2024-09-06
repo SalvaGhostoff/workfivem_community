@@ -13,7 +13,6 @@ CreateThread(function()
     local id = GetPlayerServerId(player)
     local result = lib.callback.await('wf:getUID', source)
     if not result then return end
-    print(json.encode(result))
     ids = {
         id = id,
         uid = result[1].id
