@@ -1,0 +1,7 @@
+# fivem artifacts
+artifact/
+artifacts/
+server/
+
+# cache
+cache/
