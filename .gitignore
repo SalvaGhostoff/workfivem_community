@@ -1,10 +1,11 @@
 # fivem artifacts
-artifact/
-artifacts/
-alpine/
+artifact
+artifacts
+alpine
+server
 
 # cache
-cache/
+cache
 
 # start file
 start.bat
