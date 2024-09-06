@@ -6,3 +6,7 @@ server/
 
 # cache
 cache/
+
+# start file
+start.bat
+launch.bat
