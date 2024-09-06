@@ -14,8 +14,9 @@ CreateThread(function()
         SetDiscordRichPresenceAssetSmall(ConfigClient.richPresence.assetSmall)
         SetDiscordRichPresenceAssetSmallText(ConfigClient.richPresence.assetSmallText)
         SetRichPresence(string.format(ConfigClient.richPresence.richPresence, GetPlayerServerId(player)))
-        SetDiscordRichPresenceAction(0, "First Button!", "fivem://connect/localhost:30120")
-        SetDiscordRichPresenceAction(1, "Second Button!", "fivem://connect/localhost:30120")
+        for i = 1, #ConfigClient.richPresence.actions do
+            SetDiscordRichPresenceAction(i - 1, ConfigClient.richPresence.actions[i].label, ConfigClient.richPresence.actions[i].url)
+        end
         Wait(ConfigClient.richPresence.wait)
     end
 end)
