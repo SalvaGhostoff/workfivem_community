@@ -1,6 +1,7 @@
 # fivem artifacts
 artifact/
 artifacts/
+alpine/
 server/
 
 # cache
