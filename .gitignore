@@ -2,7 +2,6 @@
 artifact/
 artifacts/
 alpine/
-server/
 
 # cache
 cache/
