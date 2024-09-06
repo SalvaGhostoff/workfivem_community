@@ -7,14 +7,15 @@ ConfigClient = {}
 
 ConfigClient.richPresence = {
     enable = true,
-    id = '1127598808843436132',
-    richPresence = '🔨 Bob le Bricoleur, ID: %s',
+    id = '1127598808843436132', -- ID de l'application Discord.
+    richPresence = 'Acctuellement ID : %s', -- Texte affiché dans le RichPresence.
     asset = 'work_fivem', 
     assetText = 'Work FiveM & Let\'s PoP !',
     assetSmall = '',
     assetSmallText = '',
     actions = {
-        {label = 'Discord', url = 'https://discord.gg/xxxxxx'},
-    }
-    wait = 60000 -- Il est recommandé de ne pas augmenter cette valeur.  
+        {label = 'Discord', url = GetConvar('discord:getlink', 'https://discord.gg/VyRPheG6Es')},
+        {label = 'Site Web', url = GetConvar('website:getlink', 'https://workfivem.fr')},
+    },
+    wait = 0 -- Il est recommandé de ne pas augmenter cette valeur.  
 }
