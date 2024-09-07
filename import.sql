@@ -591,6 +591,18 @@ CREATE TABLE `whitelist` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
+-- Structure de la table `epyi_administration`
+--
+
+CREATE TABLE `epyi_administration` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `type` VARCHAR(10),
+  `date_unix` BIGINT,
+  `data` LONGTEXT,
+  `owner` VARCHAR(99)
+);
+
+--
 -- Index pour les tables déchargées
 --
 
