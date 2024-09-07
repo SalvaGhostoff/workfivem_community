@@ -15,7 +15,7 @@ ConfigClient.richPresence = {
     assetSmallText = '',
     actions = {
         {label = 'Discord', url = GetConvar('discord', 'https://discord.gg/VyRPheG6Es')},
-        {label = 'Site Web', url = GetConvar('website', 'https://workfivem.fr')},
+        {label = 'Site Web', url = GetConvar('website', 'https://workfivem.lets-pop.fr')},
     },
     wait = 60000 -- Il est recommandé de ne pas augmenter cette valeur.  
 }
