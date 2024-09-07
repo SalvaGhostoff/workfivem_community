@@ -19,3 +19,21 @@ ConfigClient.richPresence = {
     },
     wait = 60000 -- Il est recommandé de ne pas augmenter cette valeur.  
 }
+
+-- PMA-VOICE
+ConfigClient.pmaRange = {
+    showRadius = true,
+    sendNotify = false,
+
+    ---@param message string
+    notify = function(message)
+        ESX.ShowNotification(message)
+    end,
+
+    ---@param voiceRange number -- La portée de la voix.
+    CreateZone = function(voiceRange)
+        local coords = GetEntityCoords(PlayerPedId())
+        DrawMarker(1, coords.x, coords.y, coords.z - 1.0, 0, 0, 0, 0, 0, 0, voiceRange * 2.0, voiceRange * 2.0, 0.1, 0, 255, 0, 100, 0, 0, 0, 0)
+    end
+}
+
