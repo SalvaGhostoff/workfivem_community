@@ -8,7 +8,7 @@ fx_version("cerulean")
 
 games({ "gta5" })
 
-client_scripts({
+files({
 	"src/RMenu.lua",
 	"src/menu/RageUI.lua",
 	"src/menu/Menu.lua",
