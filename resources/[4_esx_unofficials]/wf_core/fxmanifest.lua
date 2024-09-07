@@ -6,6 +6,7 @@
 
 fx_version 'cerulean'
 game 'gta5'
+lua54 'yes'
 
 author 'Dop <@472132977195876353>'
 description 'This core are made by Dop for the Work FiveM & Let\'s PoP ! project.'
@@ -13,6 +14,7 @@ github 'https://github.com/dopyyy'
 version '1.0 - 2024'
 
 shared_scripts {
+    '@ox_lib/init.lua',
     '@es_extended/imports.lua',
     'Shared.lua',
 }
@@ -23,11 +25,16 @@ client_script {
 }
 
 server_script {
+    '@oxmysql/lib/MySQL.lua',
     'components/server/*.lua',
     'ConfigServer.lua',
 }
 
 dependencies {
+    'ox_lib',
     'wf_core'
 }
 
+exports {
+    'GetIDS',
+}

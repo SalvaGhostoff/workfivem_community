@@ -8,14 +8,14 @@ ConfigClient = {}
 ConfigClient.richPresence = {
     enable = true,
     id = '1127598808843436132', -- ID de l'application Discord.
-    richPresence = 'Acctuellement ID : %s', -- Texte affiché dans le RichPresence.
+    richPresence = 'UID : %s | ID : %s', -- %s = ID du joueur.
     asset = 'work_fivem', 
     assetText = 'Work FiveM & Let\'s PoP !',
     assetSmall = '',
     assetSmallText = '',
     actions = {
-        {label = 'Discord', url = GetConvar('discord:getlink', 'https://discord.gg/VyRPheG6Es')},
-        {label = 'Site Web', url = GetConvar('website:getlink', 'https://workfivem.fr')},
+        {label = 'Discord', url = GetConvar('discord', 'https://discord.gg/VyRPheG6Es')},
+        {label = 'Site Web', url = GetConvar('website', 'https://workfivem.fr')},
     },
-    wait = 0 -- Il est recommandé de ne pas augmenter cette valeur.  
+    wait = 60000 -- Il est recommandé de ne pas augmenter cette valeur.  
 }

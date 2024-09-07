@@ -3,8 +3,8 @@
 -- L'objectif n'est pas de faire une base ultra complexe avec 150 scripts inédits mais de faire quelque chose de simple, parfaitement fonctionnel et adaptable à son serveur.
 -- Copyright (C) 2024 Work FiveM & Let's PoP !
 
-CreateThread(function()
-    local player = PlayerId()
+
+InitRichPresnece = function(uid, id)
     while true do
         if not ConfigClient.richPresence.enable then return end
         if not ConfigClient.richPresence.id then return print('ID RichPresence manquant.') end
@@ -19,4 +19,4 @@ CreateThread(function()
         end
         Wait(ConfigClient.richPresence.wait)
     end
-end)
+end
