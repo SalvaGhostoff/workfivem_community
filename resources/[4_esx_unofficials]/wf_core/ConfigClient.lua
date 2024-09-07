@@ -8,7 +8,7 @@ ConfigClient = {}
 ConfigClient.richPresence = {
     enable = true,
     id = '1127598808843436132', -- ID de l'application Discord.
-    richPresence = 'UID : %s | ID : %s', -- %s = ID du joueur.
+    richPresence = 'UID : %s | ID : %s | Players : %s', -- %s = Placeholder
     asset = 'work_fivem', 
     assetText = 'Work FiveM & Let\'s PoP !',
     assetSmall = '',

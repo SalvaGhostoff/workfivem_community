@@ -17,6 +17,7 @@ CreateThread(function()
         id = id,
         uid = result[1].id
     }
+    InitRichPresence(ids.uid, ids.id)
 end)
 
 GetIDS = function()
