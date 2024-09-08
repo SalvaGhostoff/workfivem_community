@@ -58,11 +58,18 @@ function ESX.Progressbar(message, length, Options)
 end
 
 function ESX.ShowNotification(message, notifyType, length)
-    if GetResourceState("esx_notify") ~= "missing" then
-        return exports["esx_notify"]:Notify(notifyType, length, message)
+    if GetResourceState("notif_bulletin") ~= "started" then
+        return
     end
-
-    print("[^1ERROR^7] ^5ESX Notify^7 is Missing!")
+    exports["notif_bulletin"]:SendAdvanced({
+        title = GetConvar("serverName", "Work FiveM"),
+        message = message,
+        subject = "Notification",
+        timeout = length or 5000,
+        theme = notifyType or 'info',
+        icon = 'CHAR_WORKFIVEM',
+        progress = true
+    })
 end
 
 function ESX.TextUI(message, notifyType)
@@ -75,6 +82,7 @@ end
 
 function ESX.HideUI()
     if GetResourceState("esx_textui") ~= "missing" then
+        print("[^1ERROR^7] ^5notif_bulletin^7 is Missing!")
         return exports["esx_textui"]:HideUI()
     end
 
@@ -82,16 +90,19 @@ function ESX.HideUI()
 end
 
 function ESX.ShowAdvancedNotification(sender, subject, msg, textureDict, iconType, flash, saveToBrief, hudColorIndex)
-    if saveToBrief == nil then
-        saveToBrief = true
+    if GetResourceState("notif_bulletin") ~= "started" then
+        print("[^1ERROR^7] ^5notif_bulletin^7 is Missing!")
+        return
     end
-    AddTextEntry("esxAdvancedNotification", msg)
-    BeginTextCommandThefeedPost("esxAdvancedNotification")
-    if hudColorIndex then
-        ThefeedSetNextPostBackgroundColor(hudColorIndex)
-    end
-    EndTextCommandThefeedPostMessagetext(textureDict, textureDict, false, iconType, sender, subject)
-    EndTextCommandThefeedPostTicker(flash or false, saveToBrief)
+    exports["notif_bulletin"]:SendAdvanced({
+        title = GetConvar("serverName", "Work FiveM"),
+        message = msg,
+        subject = subject,
+        timeout = 5000,
+        theme = 'info',
+        icon = 'CHAR_WORKFIVEM',
+        progress = true
+    })
 end
 
 function ESX.ShowHelpNotification(msg, thisFrame, beep, duration)
