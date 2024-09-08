@@ -313,18 +313,18 @@ RegisterNUICallback("nui_removed", function(data, cb)
     cb('ok')
 end)
 
-RegisterCommand("notif", function(source, args, rawCommand)
-    local text = ""
-    for i = 1, #args do
-        text = text .. " " .. args[i]
-    end
-    SendAdvanced({
-        title = "Work FiveM",
-        message = text,
-        subject = "Subject",
-        timeout = 5000,
-        theme = 'info',
-        icon = 'CHAR_WORKFIVEM',
-        progress = true
-    })
-end)
+-- RegisterCommand("notif", function(source, args, rawCommand)
+--     local text = ""
+--     for i = 1, #args do
+--         text = text .. " " .. args[i]
+--     end
+--     SendAdvanced({
+--         title = "Work FiveM",
+--         message = text,
+--         subject = "Subject",
+--         timeout = 5000,
+--         theme = 'info',
+--         icon = 'CHAR_WORKFIVEM',
+--         progress = true
+--     })
+-- end)
