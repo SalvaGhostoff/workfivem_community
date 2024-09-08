@@ -22,8 +22,10 @@ ConfigClient.richPresence = {
 
 -- PMA-VOICE
 ConfigClient.pmaRange = {
+    enable = true,
     showRadius = true,
     sendNotify = false,
+    createZoneTimeout = 100,
 
     ---@param message string
     notify = function(message)
@@ -33,7 +35,14 @@ ConfigClient.pmaRange = {
     ---@param voiceRange number -- La portée de la voix.
     CreateZone = function(voiceRange)
         local coords = GetEntityCoords(PlayerPedId())
-        DrawMarker(1, coords.x, coords.y, coords.z - 1.0, 0, 0, 0, 0, 0, 0, voiceRange * 2.0, voiceRange * 2.0, 0.1, 0, 255, 0, 100, 0, 0, 0, 0)
+        -- orange circle
+        DrawMarker(1, coords.x, coords.y, coords.z - 1.0, 0, 0, 2, 0, 0, 0, voiceRange * 2.0, voiceRange * 2.0, 0.5, 255, 140, 0, 100, false, true, 2, nil, nil, false)
     end
 }
 
+ConfigClient.AntiBunny = {
+    enable = true,
+    jumpCount = 3, -- 3 sauts
+    jumpDelay = 4000, -- 1 seconde\
+    ragdollTime = 6000 -- 6 secondes
+}

@@ -17,13 +17,13 @@ RegisterCommand('startrecord', function(source, args, rawCommand)
 end, false)
 
 -- Arrêter le record et le sauvegarder
-TriggerEvent('chat:addSuggestion', '/stoprecord', 'Commencer à enregistrer', {})
+TriggerEvent('chat:addSuggestion', '/stoprecord', 'Arrêter le record et le sauvegarder', {})
 RegisterCommand('stoprecord', function(source, args, rawCommand)
     StopRecordingAndSaveClip() -- Arrêter le record et le sauvegarder
 end, false)
 
 -- Arrêter le record et le supprimer
-TriggerEvent('chat:addSuggestion', '/deleterecord', 'Commencer à enregistrer', {})
+TriggerEvent('chat:addSuggestion', '/deleterecord', 'Arrêter le record et le supprimer', {})
 RegisterCommand('deleterecord', function(source, args, rawCommand)
     StopRecordingAndDiscardClip() -- Arrêter le record et le supprimer
 end, false)

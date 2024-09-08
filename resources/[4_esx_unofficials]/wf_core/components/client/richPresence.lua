@@ -4,16 +4,18 @@
 -- Copyright (C) 2024 Work FiveM & Let's PoP !
 
 InitRichPresence = function(uid, id)
+    if not ConfigClient.richPresence.enable then 
+        return 
+    end
+    
+    if not ConfigClient.richPresence.id then 
+        print('ID RichPresence manquant.')
+        return 
+    end
+    
+    ConsoleLog("info", "Initialisation du RichPresence avec succès.")
+
     while true do
-        if not ConfigClient.richPresence.enable then 
-            return 
-        end
-        
-        if not ConfigClient.richPresence.id then 
-            print('ID RichPresence manquant.')
-            return 
-        end
-        
         SetDiscordAppId(ConfigClient.richPresence.id)
         SetDiscordRichPresenceAsset(ConfigClient.richPresence.asset)
         SetDiscordRichPresenceAssetText(ConfigClient.richPresence.assetText)
