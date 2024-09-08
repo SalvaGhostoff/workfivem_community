@@ -16,7 +16,7 @@ version '1.0 - 2024'
 shared_scripts {
     '@ox_lib/init.lua',
     '@es_extended/imports.lua',
-    'Shared.lua',
+    'ConfigShared.lua',
 }
 
 client_script {

@@ -12,11 +12,13 @@ CreateThread(function()
     local player = PlayerId()
     local id = GetPlayerServerId(player)
     local result = lib.callback.await('wf:getUID', source)
-    if not result then return end
+    if not result then ConsoleLog('error', 'Impossible de charger vos identifiants.') return end
     ids = {
         id = id,
         uid = result[1].id
     }
+    ConsoleLog('info', 'Vos identifiants ont été chargés avec succès.')
+    InitRichPresence(ids.uid, ids.id)
 end)
 
 GetIDS = function()
