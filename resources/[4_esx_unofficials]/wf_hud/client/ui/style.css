@@ -1,0 +1,83 @@
+* {
+  user-select: none;
+  margin: 0;
+  padding: 0;
+
+  color: #ffffff;
+}
+body {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: end;
+  justify-content: start;
+  overflow: hidden;
+}
+.container {
+  width: 14.75%;
+  height: 1.5%;
+  margin: 0 0 0.6% 1.15%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.progress-bar {
+  width: 20%;
+  margin: 1px 0;
+  z-index: 0;
+  position: relative;
+  transition: 0.2s;
+  border: 1.4px solid #2121218c;
+}
+
+.progress-bar i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.5em;
+  z-index: 2;
+}
+
+#heal,
+#thirst,
+#hunger,
+#armor {
+  height: 100%;
+  z-index: 1;
+  transition: width 1s ease-in-out; 
+  position: relative;
+}
+
+.health-bar {
+  background: #578c59;
+  width: 25% !important;
+  filter: drop-shadow(0 0 10px #79e67d);
+}
+#heal {
+  background: #79e67d;
+}
+
+.thirst-bar {
+  background: #4c88a3;
+}
+#thirst {
+  background: #4dbef0;
+}
+
+.hunger-bar {
+  background: #f18f20af;
+  filter: drop-shadow(0 0 10px #ff971f);
+}
+#hunger {
+  background: #ff971f;
+}
+
+.armor-bar {
+  background: #628da1;
+  filter: drop-shadow(0 0 10px #4dbef0);
+}
+#armor {
+  background: #4dbef0;
+
+}
